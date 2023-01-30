@@ -7,7 +7,7 @@ import Navbar from "../Sections/Navbar";
 setConfiguration({ breakpoints: [768, 1170, 1500, 1700, 1800, 1900] });
 const GenresPage = () => {
   const location = useLocation();
-  const [queryUrl] = useState(
+  const [queryUrl, setQueryUrl] = useState(
     location.state.type === "genre"
       ? "https://api.mikailthoriq.cf/meta/anilist/advanced-search?genres=[" +
           '"' +

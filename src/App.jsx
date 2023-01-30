@@ -16,12 +16,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 export const SharedStateContext = React.createContext();
 const App = () => {
   const [videoIsLoading, setVideoIsLoading] = useState(false);
+  const [loggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <SharedStateContext.Provider
       value={{
         videoIsLoading,
         setVideoIsLoading,
+        setIsLoggedIn,
+        loggedIn,
       }}
     >
       <div className="App">
@@ -46,36 +49,20 @@ const App = () => {
         <BrowserRouter>
           <>
             <Routes>
-              <Route 
-                exact 
-                path="/" 
-                element={<Home />}
-              />
-              <Route 
-                exact 
-                path="/search" 
-                element={<SearchResults />} 
-                />
+              <Route exact path="/search" element={<SearchResults />} />
               <Route
                 exact
                 path="/recentep"
                 element={<RecentPage></RecentPage>}
               />
-              <Route 
-                exact 
-                path="/filter" 
-                element={<GenresPage />} 
-              />
+              <Route exact path="/filter" element={<GenresPage />} />
               <Route
                 exact
                 path="/more/:section"
                 element={<MoreSection></MoreSection>}
               />
-              <Route 
-                exact 
-                path="/watch/:id" 
-                element={<AnimePlayerPage />} 
-              />
+              <Route exact path="/watch/:id" element={<AnimePlayerPage />} />
+              <Route exact path="/" element={<Home />} />
               <Route
                 exact
                 path="/movies"

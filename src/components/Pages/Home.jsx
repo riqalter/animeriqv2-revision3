@@ -5,7 +5,6 @@ import ScrollToTop from "react-scroll-to-top";
 import Header from "../Sections/Header";
 import UpcomingSection from "../Sections/UpcomingSection";
 import AnimeSection from "../Sections/AnimeSection";
-
 const Home = () => {
   return (
     <>
@@ -20,13 +19,6 @@ const Home = () => {
         url={"https://api.mikailthoriq.cf/meta/anilist/trending"}
         id={"trending"}
         sectiontitle={"Trending"}
-      ></AnimeSection>
-      <AnimeSection
-        url={
-          "https://api.mikailthoriq.cf/meta/anilist/advanced-search?format=SPECIAL"
-        }
-        id={"special"}
-        sectiontitle={"Special"}
       ></AnimeSection>
       <InfiniteSection
         url={"https://api.mikailthoriq.cf/meta/anilist/popular"}

@@ -55,7 +55,7 @@ const InfiniteSection = ({ url, sectiontitle, itemlimit, id, querytype }) => {
         setFetchedData(results);
         setIsAnimate(true);
       });
-  }, [currpage, id, itemlimit, querytype, url]); // experimental fix
+  }, [currpage, url]);
   return (
     <>
       <section

@@ -7,7 +7,7 @@ const AnimeSection = ({ sectiontitle, url, id }) => {
     axios.get(url).then(({ data: { results } }) => {
       setFetchedData(results);
     });
-  }, [url]); // experimental fix
+  }, []);
   return (
     <section className="section section-anime" id={id}>
       {fetchedData.length > 0 && (

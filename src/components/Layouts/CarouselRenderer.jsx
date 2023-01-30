@@ -59,7 +59,7 @@ const CarouselRenderer = ({
             <div>
               <AnimeCard
                 title={query.title}
-                image={query.image}
+                image={"https://imgproxy1.riqexpe.eu.org/?url=" + query.image}
                 key={uuidv4()}
                 id={query.id}
                 sectionTitle={sectionTitle}
@@ -71,7 +71,7 @@ const CarouselRenderer = ({
               setTrailerId={setTrailerId}
               setIsPlaying={setIsPlaying}
               title={query.title}
-              image={query.images.jpg.large_image_url}
+              image={"https://imgproxy1.riqexpe.eu.org/?url=" + query.images.jpg.large_image_url}
               key={uuidv4()}
               sectionTitle={sectionTitle}
               episodeNum={isRecent ? query.episode : 0}

@@ -22,7 +22,7 @@ const AnimePlayer = ({ src, animeInfoUrl, setVideoIsLoading }) => {
       setSavedTime(Number(localStorage.getItem(animeInfoUrl)));
     }
     localStorage.setItem("recentlywatched", animeInfoUrl);
-  }, [animeInfoUrl]); // experimental fix
+  }, []);
   const [time, setTime] = useState(0);
   useEffect(() => {
     if (!src) {
@@ -32,7 +32,7 @@ const AnimePlayer = ({ src, animeInfoUrl, setVideoIsLoading }) => {
     }
     setUrl(src[0]);
     setVideoIsLoading(false);
-  }, [navigate, setVideoIsLoading, src]); // experimental fix
+  }, [src]);
   const hlsConfig = {
     crossOrigin: "anonymous",
     enableWorker: false,

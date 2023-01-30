@@ -23,7 +23,7 @@ const AnimePlayerPage = () => {
   const SharedState = useContext(SharedStateContext);
   useEffect(() => {
     SharedState.setVideoIsLoading(true);
-  }, []); // experimental fix
+  }, []);
   const { id } = useParams();
   const [adaptation, setAdaptation] = useState(null);
   const [description, setDescription] = useState(null);
@@ -77,7 +77,6 @@ const AnimePlayerPage = () => {
 
   useEffect(() => {
     initialFetch();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
   useEffect(() => {
     if (currentId !== "")
@@ -98,7 +97,7 @@ const AnimePlayerPage = () => {
               <AnimePlayer
                 setVideoIsLoading={SharedState.setVideoIsLoading}
                 animeInfoUrl={
-                  "https://api.mikailthoriq.cf/meta/anilist/watch/" + currentId
+                  " https://api.mikailthoriq.cf/meta/anilist/watch/" + currentId
                 }
                 src={currentStreamUrl}
               ></AnimePlayer>
@@ -151,7 +150,7 @@ const AnimePlayerPage = () => {
                   <RWebShare
                     data={{
                       text: `Watch ${anime.title.english} on animeriqv2`,
-                      url: `https://beta.mikailthoriq.cf/watch/${id}`, // change after prod
+                      url: `https://release-candidate.mikailthoriq.cf/watch/${id}`, // changed if prod
                       title: anime.title.english,
                     }}
                   >

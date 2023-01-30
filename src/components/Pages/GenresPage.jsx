@@ -5,7 +5,7 @@ import "./GenresPage.css";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 const GenresPage = () => {
-  const [genresinfo] = useState([
+  const [genresinfo, setGenresInfo] = useState([
     {
       title: "Action",
       image:
@@ -92,7 +92,7 @@ const GenresPage = () => {
         "https://s4.anilist.co/file/anilistcdn/media/anime/banner/108632-yeLbrgPN4Oni.jpg",
     },
   ]);
-  const [formatsInfo] = useState([
+  const [formatsInfo, setFormatsInfo] = useState([
     {
       title: "TV",
       image:
@@ -119,17 +119,12 @@ const GenresPage = () => {
         "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
     },
     {
-      title: "SPECIAL",
-      image:
-        "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11757-TlEEV9weG4Ag.jpg",
-    },
-    {
       title: "MUSIC",
       image:
         "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11757-TlEEV9weG4Ag.jpg",
     },
   ]);
-  const [seasonsInfo] = useState([
+  const [seasonsInfo, setSeasonsInfo] = useState([
     {
       title: "WINTER",
       image:
@@ -151,7 +146,7 @@ const GenresPage = () => {
         "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97940-1URQdQ4U1a0b.jpg",
     },
   ]);
-  const [statusesInfo] = useState([
+  const [statusesInfo, setStatusesInfo] = useState([
     {
       title: "RELEASING",
       image:

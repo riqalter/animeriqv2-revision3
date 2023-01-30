@@ -6,7 +6,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React, { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { SharedStateContext } from "../../App";
+import { useContext } from "react";
 const Navbar = () => {
+  const SharedState = useContext(SharedStateContext);
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   function useOutsideAlerter(ref) {

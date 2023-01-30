@@ -31,7 +31,7 @@ const HeaderCarouselCard = ({
       <div
         className="headercard-wrapper"
         style={{
-          backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) ),url(${cover})`,
+          backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) ),url(${"https://imgproxy1.riqexpe.eu.org/?url=" + cover})`,
         }}
       >
         <div className="headercard-animeinfo-wrapper">
