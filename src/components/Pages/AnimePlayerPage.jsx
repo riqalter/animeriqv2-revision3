@@ -23,7 +23,7 @@ const AnimePlayerPage = () => {
   const SharedState = useContext(SharedStateContext);
   useEffect(() => {
     SharedState.setVideoIsLoading(true);
-  }, [SharedState]); // experimental fix
+  }, []); // experimental fix
   const { id } = useParams();
   const [adaptation, setAdaptation] = useState(null);
   const [description, setDescription] = useState(null);
