@@ -11,7 +11,7 @@ const VerticalCarousel = ({ finalQuery, sectionTitle }) => {
           <div style={{ textAlign: "center" }}>
             <AnimeCard
               key={uuidv4()}
-              image={"https://imgproxy1.riqexpe.eu.org/?url=" + query.image}
+              image={query.image}
               id={query.id}
               sectionTitle={sectionTitle}
             ></AnimeCard>

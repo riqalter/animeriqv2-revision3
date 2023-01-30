@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TextTruncate from "react-text-truncate";
 import { SharedStateContext } from "../../App";
 import { useNavigate } from "react-router-dom";
+//const imgproxy1 = "https://imgproxy1.riqexpe.eu.org/?url=";
+const imgproxy3 = "https://imgproxy3.riqexpe.eu.org/?url=";
 const HeaderCarouselCard = ({
   duration,
   cover,
@@ -31,7 +33,7 @@ const HeaderCarouselCard = ({
       <div
         className="headercard-wrapper"
         style={{
-          backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) ),url(${"https://imgproxy1.riqexpe.eu.org/?url=" + cover})`,
+          backgroundImage: ` linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) ),url(${imgproxy3 + cover})`,
         }}
       >
         <div className="headercard-animeinfo-wrapper">

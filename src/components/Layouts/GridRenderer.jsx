@@ -40,7 +40,7 @@ const GridRenderer = ({ finalQuery, setAnimeInfo, isAnimate }) => {
                 setAnimeInfo={setAnimeInfo}
                 title={query.title}
                 id={query.id}
-                image={"https://imgproxy1.riqexpe.eu.org/?url=" + query.image}
+                image={query.image}
                 key={uuidv4()}
                 rating={query.rating}
                 year={query.releaseDate}

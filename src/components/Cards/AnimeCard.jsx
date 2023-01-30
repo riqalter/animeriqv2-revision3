@@ -5,6 +5,8 @@ import { StarFilled } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import "./AnimeCard.css";
 import React from "react";
+const imgproxy1 = "https://imgproxy1.riqexpe.eu.org/?url=";
+//const imgproxy2 = "https://imgproxy2.riqexpe.eu.org/?url=";
 const CarouselCard = ({ title, image, episodeNumber, id, rating, year }) => {
   const navigate = useNavigate();
   const SharedState = useContext(SharedStateContext);
@@ -24,7 +26,7 @@ const CarouselCard = ({ title, image, episodeNumber, id, rating, year }) => {
         <div
           className="animecard-card"
           style={{
-            backgroundImage: `url(${"https://imgproxy1.riqexpe.eu.org/?url=" + image})`,
+            backgroundImage: `url(${imgproxy1 + image})`,
           }}
         >
           {rating && (

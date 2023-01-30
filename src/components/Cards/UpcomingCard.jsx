@@ -1,5 +1,7 @@
 import TextTruncate from "react-text-truncate";
 import "./UpcomingCard.css";
+//const imgproxy1 = "https://imgproxy1.riqexpe.eu.org/?url=";
+const imgproxy3 = "https://imgproxy3.riqexpe.eu.org/?url=";
 const UpcomingCard = ({
   title,
   image,
@@ -21,7 +23,7 @@ const UpcomingCard = ({
         <div
           className="upcomingcard-card"
           style={{
-            backgroundImage: `url(${"https://imgproxy1.riqexpe.eu.org/?url=" + image})`,
+            backgroundImage: `url(${imgproxy3 + image})`,
           }}
         ></div>
         {episodeNum > 0 && (
